@@ -3,8 +3,8 @@ const puppeteer = require("puppeteer-core");
 
 // ===== CONFIG =====
 const TWEETS_PER_BATCH = 50;
-const MIN_DELAY = 20 * 1000; // 30 sec minimum
-const MAX_DELAY = 25 * 1000; // 60 sec maximum
+const MIN_DELAY = 30 * 1000; // 30 sec minimum
+const MAX_DELAY = 60 * 1000; // 60 sec maximum
 const COOLDOWN = 30 * 60 * 1000; // 30 min
 
 // Random delay generator
@@ -13,7 +13,7 @@ function getRandomDelay() {
 }
 
 // Groq API Configuration
-const GROQ_API_KEY = "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";
+const GROQ_API_KEY = "Enter Your Groq API Key";
 const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions";
 
 // Chrome paths for Groq profile
@@ -223,4 +223,5 @@ async function generateAIReply(tweetText) {
   
   await browser.disconnect();
   process.exit(0);
+
 })();
